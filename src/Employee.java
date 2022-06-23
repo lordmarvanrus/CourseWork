@@ -3,21 +3,22 @@ public class Employee {
     private String firstName;
     private String middleName;
     private String lastName;
-    private int employeeId;
     private int group;
     private int salary;
+    private int id;
+    private static int employeeId = 1;
 
-    public Employee(String lastName, String firstName, String middleName, int group, int salary, int employeeId) {
+    public Employee(String lastName, String firstName, String middleName, int group, int salary) {
+        this.id = employeeId++;
         this.lastName = lastName;
         this.firstName = firstName;
         this.middleName = middleName;
         this.group = group;
         this.salary = salary;
-        this.employeeId = employeeId;
     }
 
     public int getId() {
-        return employeeId;
+        return id;
     }
 
     public int getGroup() {
@@ -41,7 +42,7 @@ public class Employee {
     }
 
     public String toString() {
-        return "Имя сотрудника: " + lastName + " " + firstName + " " + middleName + ", персональный ID: " + employeeId +
+        return "Имя сотрудника: " + lastName + " " + firstName + " " + middleName + ", персональный ID: " + id +
                 ", " + "Заработная плата: " + salary;
     }
 }

@@ -6,10 +6,10 @@ public class Main {
         employee.addEmployee("Сергеев", "Сергей", "Сергеевич", 1, 27_000);
         employee.addEmployee("Петров", "Петр", "Петрович", 1, 33_000);
         employee.addEmployee("Максимов", "Максим", "Максимович", 1, 43000);
-        System.out.println("employee.getCurrentSize() = " + employee.getCurrentSize());
+        /* System.out.println("employee.getCurrentSize() = " + employee.getCurrentSize());
         employee.printAllEmployee();
         employee.removeEmployee(2);
-        employee.printAllEmployee();
+        //employee.printAllEmployee();
         employee.setSalary(3, 120_000);
         //employee.setGroup(3, 2);
         employee.getMinSalary();
@@ -20,7 +20,7 @@ public class Main {
         employee.getGroupList(1);
         //employee.printAllEmployee();
         employee.increaseSalary(30);
-        employee.printAllEmployee();
+        //employee.printAllEmployee();
         employee.getGroupMinSalary(1);
         employee.getGroupMaxSalary(1);
         employee.getGroupMonthExpenses(1);
@@ -28,6 +28,21 @@ public class Main {
         employee.getAllGroupEmployee(1);
         employee.getEmployeeSalaryLower(100_000);
         employee.getEmployeeSalaryHigher(100_000);
+        employee.getAverageSalary();
+        employee.removeEmployee(1); */
+        employee.addEmployee("Антонов", "Антон", "Антонович", 2, 25_000);
+        employee.removeEmployee(2);
+        employee.printAllEmployee();
+        employee.increaseGroupSalary(1, 100);
+        employee.printAllEmployee();
+        employee.setSalary(4, 100_000);
+        employee.setGroup(4, 2);
+        employee.increaseSalary(50);
+        employee.printAllEmployee();
+        employee.addEmployee("Михайлов", "Михаил", "Михайлович", 2, 25_000);
+        employee.addEmployee("Михайлов", "Михаил", "Михайлович", 2, 25_000);
+        employee.getAverageSalary();
+
 
 
 
