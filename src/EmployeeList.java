@@ -11,12 +11,12 @@ public class EmployeeList {
     //базовая сложность
     public void getMinSalary() {
         System.out.println("Поиск сотрудника с минимальной зарплатой...");
-        int minSalary = employees[0].getSalary();
+        int minSalary = 1_000_000;
         int minSalaryId = employees[0].getId();
         for (int i = 0; i < employees.length; i++) {
             if (employees[i] != null && employees[i].getSalary() < minSalary) {
                 minSalary = employees[i].getSalary();
-                minSalaryId = employees[i].getId();
+                minSalaryId = i;
             }
         }
         printEmployee(minSalaryId);
@@ -29,7 +29,7 @@ public class EmployeeList {
         for (int i = 0; i < employees.length; i++) {
             if (employees[i] != null && employees[i].getSalary() > maxSalary) {
                 maxSalary = employees[i].getSalary();
-                maxSalaryId = employees[i].getId();
+                maxSalaryId = i;
             }
         }
         printEmployee(maxSalaryId);
@@ -68,7 +68,7 @@ public class EmployeeList {
         for (int i = 0; i < employees.length; i++) {
             if (employees[i] != null && employees[i].getGroup() == group && employees[i].getSalary() < minSalary) {
                 minSalary = employees[i].getSalary();
-                minSalaryId = employees[i].getId();
+                minSalaryId = i;
             }
         }
         printEmployee(minSalaryId);
@@ -81,7 +81,7 @@ public class EmployeeList {
         for (int i = 0; i < employees.length; i++) {
             if (employees[i] != null && employees[i].getGroup() == group && employees[i].getSalary() > maxSalary) {
                 maxSalary = employees[i].getSalary();
-                maxSalaryId = employees[i].getId();
+                maxSalaryId = i;
             }
         }
         printEmployee(maxSalaryId);
